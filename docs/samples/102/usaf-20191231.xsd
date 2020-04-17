@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- DFIN ActiveDisclosure(SM) XBRL Schema Document - http://www.dfinsolutions.com/ -->
+<!-- Creation Date      : 2020-04-14T01:25:29.1871990+00:00 -->
+<!-- Version            : 5.0.1.385 -->
+<!-- Package ID         : 289a5b267aa8471d936ab19882543c3c -->
+<!-- Copyright (c) 2020 Donnelley Financial Solutions, Inc. All Rights Reserved. -->
+<xsd:schema xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:sic="http://xbrl.sec.gov/sic/2011-01-31" xmlns:stpr="http://xbrl.sec.gov/stpr/2018-01-31" xmlns:naics="http://xbrl.sec.gov/naics/2017-01-31" xmlns:srt-types="http://fasb.org/srt-types/2019-01-31" xmlns:usaf="http://usafacts.org/20191231" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:srt="http://fasb.org/srt/2019-01-31" xmlns:us-gaap="http://fasb.org/us-gaap/2019-01-31" xmlns:dei="http://xbrl.sec.gov/dei/2019-01-31" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:country="http://xbrl.sec.gov/country/2017-01-31" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:currency="http://xbrl.sec.gov/currency/2019-01-31" xmlns:us-types="http://fasb.org/us-types/2019-01-31" xmlns:exch="http://xbrl.sec.gov/exch/2019-01-31" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://usafacts.org/20191231" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" namespace="http://www.xbrl.org/2003/instance" />
+  <xsd:import schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" namespace="http://www.xbrl.org/2003/linkbase" />
+  <xsd:import schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" namespace="http://xbrl.org/2005/xbrldt" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/country/2017/country-2017-01-31.xsd" namespace="http://xbrl.sec.gov/country/2017-01-31" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/currency/2019/currency-2019-01-31.xsd" namespace="http://xbrl.sec.gov/currency/2019-01-31" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd" namespace="http://xbrl.sec.gov/dei/2019-01-31" />
+  <xsd:import schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" namespace="http://www.xbrl.org/dtr/type/non-numeric" />
+  <xsd:import schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" namespace="http://www.xbrl.org/dtr/type/numeric" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/exch/2019/exch-2019-01-31.xsd" namespace="http://xbrl.sec.gov/exch/2019-01-31" />
+  <xsd:import schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" />
+  <xsd:import schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" namespace="http://www.xbrl.org/2009/role/negated" />
+  <xsd:import schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" namespace="http://www.xbrl.org/2009/role/net" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/naics/2017/naics-2017-01-31.xsd" namespace="http://xbrl.sec.gov/naics/2017-01-31" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd" namespace="http://xbrl.sec.gov/sic/2011-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-2019-01-31.xsd" namespace="http://fasb.org/srt/2019-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-roles-2019-01-31.xsd" namespace="http://fasb.org/srt-roles/2019-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-types-2019-01-31.xsd" namespace="http://fasb.org/srt-types/2019-01-31" />
+  <xsd:import schemaLocation="https://xbrl.sec.gov/stpr/2018/stpr-2018-01-31.xsd" namespace="http://xbrl.sec.gov/stpr/2018-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-gaap-2019-01-31.xsd" namespace="http://fasb.org/us-gaap/2019-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-roles-2019-01-31.xsd" namespace="http://fasb.org/us-roles/2019-01-31" />
+  <xsd:import schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-types-2019-01-31.xsd" namespace="http://fasb.org/us-types/2019-01-31" />
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType id="TemplateLink" roleURI="http://usafacts.org/20191231/role/TemplateLink" xmlns:link="http://www.xbrl.org/2003/linkbase">
+        <link:definition>00000 - Document - Template Link</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="usaf-20191231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:title="Calculation Links, all" xlink:type="simple" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="usaf-20191231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:title="Definition Links, all" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="usaf-20191231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:title="Label Links, all" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="usaf-20191231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:title="Presentation Links, all" xlink:type="simple" />
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DocumentDocumentAndEntityInformation" id="Role_DocumentDocumentAndEntityInformation">
+        <link:definition>100000 - Document - Document and Entity Information</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/StatementCombinedFunctionalIncomeStatements" id="Role_StatementCombinedFunctionalIncomeStatements">
+        <link:definition>100010 - Statement - Combined Functional Income Statements</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/StatementCombinedSegmentIncomeStatements" id="Role_StatementCombinedSegmentIncomeStatements">
+        <link:definition>100020 - Statement - Combined Segment Income Statements</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/StatementCombinedBalanceSheets" id="Role_StatementCombinedBalanceSheets">
+        <link:definition>100030 - Statement - Combined Balance Sheets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountingPolicies" id="Role_DisclosureAccountingPolicies">
+        <link:definition>100040 - Disclosure - Accounting Policies</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssets" id="Role_DisclosureCashAndOtherMonetaryAssets">
+        <link:definition>100050 - Disclosure - Cash and Other Monetary Assets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNet" id="Role_DisclosureAccountsAndTaxesReceivableNet">
+        <link:definition>100060 - Disclosure - Accounts and Taxes Receivable, Net</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNet" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNet">
+        <link:definition>100070 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInventoriesAndRelatedPropertyNet" id="Role_DisclosureInventoriesAndRelatedPropertyNet">
+        <link:definition>100080 - Disclosure - Inventories and Related Property, Net</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNet" id="Role_DisclosurePropertyPlantAndEquipmentNet">
+        <link:definition>100090 - Disclosure - Property, Plant, and Equipment, Net</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecurities" id="Role_DisclosureDebtAndEquitySecurities">
+        <link:definition>100100 - Disclosure - Debt and Equity Securities</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprises" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprises">
+        <link:definition>100110 - Disclosure - Investments in Government-Sponsored Enterprises</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherAssets" id="Role_DisclosureOtherAssets">
+        <link:definition>100120 - Disclosure - Other Assets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsPayable" id="Role_DisclosureAccountsPayable">
+        <link:definition>100130 - Disclosure - Accounts Payable</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterest" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterest">
+        <link:definition>100140 - Disclosure - Debt Securities Held by the Public and Accrued Interest</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayable" id="Role_DisclosureEmployeeAndVeteranBenefitsPayable">
+        <link:definition>100150 - Disclosure - Employee and Veteran Benefits Payable</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEnvironmentalAndDisposalLiabilities" id="Role_DisclosureEnvironmentalAndDisposalLiabilities">
+        <link:definition>100160 - Disclosure - Environmental and Disposal Liabilities</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureBenefitsDueAndPayable" id="Role_DisclosureBenefitsDueAndPayable">
+        <link:definition>100170 - Disclosure - Benefits Due and Payable</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInsuranceAndGuaranteeProgramLiabilities" id="Role_DisclosureInsuranceAndGuaranteeProgramLiabilities">
+        <link:definition>100180 - Disclosure - Insurance and Guarantee Program Liabilities</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherLiabilities" id="Role_DisclosureOtherLiabilities">
+        <link:definition>100190 - Disclosure - Other Liabilities</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePriorPeriodAdjustments" id="Role_DisclosurePriorPeriodAdjustments">
+        <link:definition>100200 - Disclosure - Prior-Period Adjustments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingencies" id="Role_DisclosureContingencies">
+        <link:definition>100210 - Disclosure - Contingencies</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitments" id="Role_DisclosureCommitments">
+        <link:definition>100220 - Disclosure - Commitments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFundsFromDedicatedCollections" id="Role_DisclosureFundsFromDedicatedCollections">
+        <link:definition>100230 - Disclosure - Funds from Dedicated Collections</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFiduciaryActivities" id="Role_DisclosureFiduciaryActivities">
+        <link:definition>100240 - Disclosure - Fiduciary Activities</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureStewardshipLandAndHeritageAssets" id="Role_DisclosureStewardshipLandAndHeritageAssets">
+        <link:definition>100250 - Disclosure - Stewardship Land and Heritage Assets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureIntergovernmentalTransfers" id="Role_DisclosureIntergovernmentalTransfers">
+        <link:definition>100260 - Disclosure - Intergovernmental Transfers</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOffsettingAmounts" id="Role_DisclosureOffsettingAmounts">
+        <link:definition>100270 - Disclosure - Offsetting Amounts</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureSubsequentEvent" id="Role_DisclosureSubsequentEvent">
+        <link:definition>100280 - Disclosure - Subsequent Event</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountingPoliciesPolicies" id="Role_DisclosureAccountingPoliciesPolicies">
+        <link:definition>100290 - Disclosure - Accounting Policies (Policies)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssetsTables" id="Role_DisclosureCashAndOtherMonetaryAssetsTables">
+        <link:definition>100300 - Disclosure - Cash and Other Monetary Assets (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNetTables" id="Role_DisclosureAccountsAndTaxesReceivableNetTables">
+        <link:definition>100310 - Disclosure - Accounts and Taxes Receivable, Net (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetTables" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetTables">
+        <link:definition>100320 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInventoriesAndRelatedPropertyNetTables" id="Role_DisclosureInventoriesAndRelatedPropertyNetTables">
+        <link:definition>100330 - Disclosure - Inventories and Related Property, Net (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNetTables" id="Role_DisclosurePropertyPlantAndEquipmentNetTables">
+        <link:definition>100340 - Disclosure - Property, Plant, and Equipment, Net (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesTables" id="Role_DisclosureDebtAndEquitySecuritiesTables">
+        <link:definition>100350 - Disclosure - Debt and Equity Securities (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesTables" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesTables">
+        <link:definition>100360 - Disclosure - Investments in Government-Sponsored Enterprises (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherAssetsTables" id="Role_DisclosureOtherAssetsTables">
+        <link:definition>100370 - Disclosure - Other Assets (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsPayableTables" id="Role_DisclosureAccountsPayableTables">
+        <link:definition>100380 - Disclosure - Accounts Payable (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestTables" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestTables">
+        <link:definition>100390 - Disclosure - Debt Securities Held by the Public and Accrued Interest (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableTables" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableTables">
+        <link:definition>100400 - Disclosure - Employee and Veteran Benefits Payable (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEnvironmentalAndDisposalLiabilitiesTables" id="Role_DisclosureEnvironmentalAndDisposalLiabilitiesTables">
+        <link:definition>100410 - Disclosure - Environmental and Disposal Liabilities (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureBenefitsDueAndPayableTables" id="Role_DisclosureBenefitsDueAndPayableTables">
+        <link:definition>100420 - Disclosure - Benefits Due and Payable (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInsuranceAndGuaranteeProgramLiabilitiesTables" id="Role_DisclosureInsuranceAndGuaranteeProgramLiabilitiesTables">
+        <link:definition>100430 - Disclosure - Insurance and Guarantee Program Liabilities (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherLiabilitiesTables" id="Role_DisclosureOtherLiabilitiesTables">
+        <link:definition>100440 - Disclosure - Other Liabilities (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePriorPeriodAdjustmentsTables" id="Role_DisclosurePriorPeriodAdjustmentsTables">
+        <link:definition>100450 - Disclosure - Prior-period Adjustments (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingenciesTables" id="Role_DisclosureContingenciesTables">
+        <link:definition>100460 - Disclosure - Contingencies (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitmentsTables" id="Role_DisclosureCommitmentsTables">
+        <link:definition>100470 - Disclosure - Commitments (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFundsFromDedicatedCollectionsTables" id="Role_DisclosureFundsFromDedicatedCollectionsTables">
+        <link:definition>100480 - Disclosure - Funds from Dedicated Collections (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFiduciaryActivitiesTables" id="Role_DisclosureFiduciaryActivitiesTables">
+        <link:definition>100490 - Disclosure - Fiduciary Activities (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureStewardshipLandAndHeritageAssetsTables" id="Role_DisclosureStewardshipLandAndHeritageAssetsTables">
+        <link:definition>100500 - Disclosure - Stewardship Land and Heritage Assets (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureIntergovernmentalTransfersTables" id="Role_DisclosureIntergovernmentalTransfersTables">
+        <link:definition>100510 - Disclosure - Intergovernmental Transfers (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOffsettingAmountsTables" id="Role_DisclosureOffsettingAmountsTables">
+        <link:definition>100520 - Disclosure - Offsetting Amounts (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsDetails" id="Role_DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsDetails">
+        <link:definition>100530 - Disclosure - Cash and Other Monetary Assets - Schedule of Cash and Other Monetary Assets (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsUnderFederalGovernmentDetails" id="Role_DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsUnderFederalGovernmentDetails">
+        <link:definition>100540 - Disclosure - Cash and Other Monetary Assets - Schedule of Cash and Other Monetary Assets Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssetsAdditionalInformationDetails" id="Role_DisclosureCashAndOtherMonetaryAssetsAdditionalInformationDetails">
+        <link:definition>100550 - Disclosure - Cash and Other Monetary Assets - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsUnderStatementAndLocalGovernmentDetails" id="Role_DisclosureCashAndOtherMonetaryAssetsScheduleOfCashAndOtherMonetaryAssetsUnderStatementAndLocalGovernmentDetails">
+        <link:definition>100560 - Disclosure - Cash and Other Monetary Assets - Schedule of Cash and Other Monetary Assets Under Statement and Local Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetDetails" id="Role_DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetDetails">
+        <link:definition>100570 - Disclosure - Accounts and Taxes Receivable, Net - Schedule of Accounts and Taxes Receivable, Net (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetForFederalGovernmentDetails" id="Role_DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetForFederalGovernmentDetails">
+        <link:definition>100580 - Disclosure - Accounts and Taxes Receivable, Net - Schedule of Accounts and Taxes Receivable, Net for Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNetAdditionalInformationDetails" id="Role_DisclosureAccountsAndTaxesReceivableNetAdditionalInformationDetails">
+        <link:definition>100590 - Disclosure - Accounts and Taxes Receivable, Net - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetForStateAndLocalGovernmentDetails" id="Role_DisclosureAccountsAndTaxesReceivableNetScheduleOfAccountsAndTaxesReceivableNetForStateAndLocalGovernmentDetails">
+        <link:definition>100600 - Disclosure - Accounts and Taxes Receivable, Net - Schedule of Accounts and Taxes Receivable, Net for State and Local Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoansReceivableDetails" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoansReceivableDetails">
+        <link:definition>100610 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net - Schedule of Loans Receivable (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoanGuaranteeLiabilitiesDetails" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoanGuaranteeLiabilitiesDetails">
+        <link:definition>100620 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net - Schedule of Loan Guarantee Liabilities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfDirectLoansAndDefaultedGuaranteedLoansDetails" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfDirectLoansAndDefaultedGuaranteedLoansDetails">
+        <link:definition>100630 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net - Schedule of Direct Loans and Defaulted Guaranteed Loans (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoanGuaranteesDetails" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetScheduleOfLoanGuaranteesDetails">
+        <link:definition>100640 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net - Schedule of Loan Guarantees (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetAdditionalInformationDetails" id="Role_DisclosureLoansReceivableAndLoanGuaranteeLiabilitiesNetAdditionalInformationDetails">
+        <link:definition>100650 - Disclosure - Loans Receivable and Loan Guarantee Liabilities, Net - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInventoriesAndRelatedPropertyNetScheduleOfInventoriesAndRelatedPropertyNetDetails" id="Role_DisclosureInventoriesAndRelatedPropertyNetScheduleOfInventoriesAndRelatedPropertyNetDetails">
+        <link:definition>100660 - Disclosure - Inventories and Related Property, Net - Schedule of Inventories and Related Property, Net (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInventoriesAndRelatedPropertyNetScheduleOfInventoriesAndRelatedPropertyNetUnderFederalGovernmentDetails" id="Role_DisclosureInventoriesAndRelatedPropertyNetScheduleOfInventoriesAndRelatedPropertyNetUnderFederalGovernmentDetails">
+        <link:definition>100670 - Disclosure - Inventories and Related Property, Net - Schedule of Inventories and Related Property, Net Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInventoriesAndRelatedPropertyNetAdditionalInformationDetails" id="Role_DisclosureInventoriesAndRelatedPropertyNetAdditionalInformationDetails">
+        <link:definition>100680 - Disclosure - Inventories and Related Property, Net - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetDetails" id="Role_DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetDetails">
+        <link:definition>100690 - Disclosure - Property, Plant, and Equipment, Net - Schedule of Property, Plant, and Equipment, Net (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetUnderFederalGovernmentDetails" id="Role_DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetUnderFederalGovernmentDetails">
+        <link:definition>100700 - Disclosure - Property, Plant, and Equipment, Net - Schedule of Property, Plant, and Equipment, Net Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNetAdditionalInformationDetails" id="Role_DisclosurePropertyPlantAndEquipmentNetAdditionalInformationDetails">
+        <link:definition>100710 - Disclosure - Property, Plant, and Equipment, Net - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetUnderStateAndLocalGovernmentDetails" id="Role_DisclosurePropertyPlantAndEquipmentNetScheduleOfPropertyPlantAndEquipmentNetUnderStateAndLocalGovernmentDetails">
+        <link:definition>100720 - Disclosure - Property, Plant, and Equipment, Net - Schedule of Property, Plant, and Equipment, Net Under State and Local Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesScheduleOfDebtAndEquitySecuritiesDetails" id="Role_DisclosureDebtAndEquitySecuritiesScheduleOfDebtAndEquitySecuritiesDetails">
+        <link:definition>100730 - Disclosure - Debt and Equity Securities - Schedule of Debt and Equity Securities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesScheduleOfHeldToMaturityAvailableForSaleAndTradingSecuritiesDetails" id="Role_DisclosureDebtAndEquitySecuritiesScheduleOfHeldToMaturityAvailableForSaleAndTradingSecuritiesDetails">
+        <link:definition>100740 - Disclosure - Debt and Equity Securities - Schedule of Held-to-Maturity, Available-for-Sale and Trading Securities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesScheduleOfDebtAndEquitySecuritiesByAgencyDetails" id="Role_DisclosureDebtAndEquitySecuritiesScheduleOfDebtAndEquitySecuritiesByAgencyDetails">
+        <link:definition>100750 - Disclosure - Debt and Equity Securities - Schedule of Debt and Equity Securities by Agency (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesAdditionalInformationDetails" id="Role_DisclosureDebtAndEquitySecuritiesAdditionalInformationDetails">
+        <link:definition>100760 - Disclosure - Debt and Equity Securities - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtAndEquitySecuritiesScheduleOfPensionAndNonPensionDebtAndEquitySecuritiesDetails" id="Role_DisclosureDebtAndEquitySecuritiesScheduleOfPensionAndNonPensionDebtAndEquitySecuritiesDetails">
+        <link:definition>100770 - Disclosure - Debt and Equity Securities - Schedule of Pension and Non-Pension Debt and Equity Securities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfInvestmentsInGovernmentSponsoredEnterprisesDetails" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfInvestmentsInGovernmentSponsoredEnterprisesDetails">
+        <link:definition>100780 - Disclosure - Investments in Government-Sponsored Enterprises - Schedule of Investments in Government-Sponsored Enterprises (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesAdditionalInformationDetails" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesAdditionalInformationDetails">
+        <link:definition>100790 - Disclosure - Investments In Government-Sponsored Enterprises - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetDetails" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetDetails">
+        <link:definition>100800 - Disclosure - Investments in Government-Sponsored Enterprises - Schedule of Balance Sheet (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetDetails2" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetDetails2">
+        <link:definition>100810 - Disclosure - Investments in Government-Sponsored Enterprises - Schedule of Balance Sheet (Details)2</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetParentheticalDetails" id="Role_DisclosureInvestmentsInGovernmentSponsoredEnterprisesScheduleOfBalanceSheetParentheticalDetails">
+        <link:definition>100820 - Disclosure - Investments in Government-Sponsored Enterprises - Schedule of Balance Sheet (Parenthetical) (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherAssetsScheduleOfOtherAssetsDetails" id="Role_DisclosureOtherAssetsScheduleOfOtherAssetsDetails">
+        <link:definition>100830 - Disclosure - Other Assets - Schedule of Other Assets (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsPayableScheduleOfAccountsPayableDetails" id="Role_DisclosureAccountsPayableScheduleOfAccountsPayableDetails">
+        <link:definition>100840 - Disclosure - Accounts Payable - Schedule of Accounts Payable (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureAccountsPayableScheduleOfAccountsPayableUnderFederalGovernmentDetails" id="Role_DisclosureAccountsPayableScheduleOfAccountsPayableUnderFederalGovernmentDetails">
+        <link:definition>100850 - Disclosure - Accounts Payable - Schedule of Accounts Payable Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestDetails" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestDetails">
+        <link:definition>100860 - Disclosure - Debt Securities Held by the Public and Accrued Interest - Debt Securities Held by Public and Accrued Interest (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestUnderFederalGovernmentDetails" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestUnderFederalGovernmentDetails">
+        <link:definition>100870 - Disclosure - Debt Securities Held by the Public and Accrued Interest - Debt Securities Held by Public and Accrued Interest Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestUnderFederalGovernmentParentheticalDetails" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicAndAccruedInterestUnderFederalGovernmentParentheticalDetails">
+        <link:definition>100880 - Disclosure - Debt Securities Held by the Public and Accrued Interest - Debt Securities Held by Public and Accrued Interest Under Federal Government (Parenthetical) (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestAdditionalInformationDetails" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestAdditionalInformationDetails">
+        <link:definition>100890 - Disclosure - Debt Securities Held by the Public and Accrued Interest - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicUnderStateAndLocalGovernmentDetails" id="Role_DisclosureDebtSecuritiesHeldByPublicAndAccruedInterestDebtSecuritiesHeldByPublicUnderStateAndLocalGovernmentDetails">
+        <link:definition>100900 - Disclosure - Debt Securities Held by the Public and Accrued Interest - Debt Securities Held by Public Under State and Local Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableDetails">
+        <link:definition>100910 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Employee and Veteran Benefits Payable (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableFederalGovernmentDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableFederalGovernmentDetails">
+        <link:definition>100920 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Employee and Veteran Benefits Payable (Federal Government) (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInPensionAndAccruedBenefitsDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInPensionAndAccruedBenefitsDetails">
+        <link:definition>100930 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Change in Pension and Accrued Benefits (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInPostRetirementHealthAndAccruedBenefitsDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInPostRetirementHealthAndAccruedBenefitsDetails">
+        <link:definition>100940 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Change in Post-Retirement Health and Accrued Benefits (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableAdditionalInformationDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableAdditionalInformationDetails">
+        <link:definition>100950 - Disclosure - Employee and Veteran Benefits Payable - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantLongTermEconomicAssumptionUsedInDeterminingPensionLiabilityAndRelatedExpenseDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantLongTermEconomicAssumptionUsedInDeterminingPensionLiabilityAndRelatedExpenseDetails">
+        <link:definition>100960 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Significant Long-Term Economic Assumption Used in Determining Pension Liability and Related Expense (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantLongTermEconomicAssumptionUsedInDeterminingPostRetirementHealthBenefitsAndRelatedExpenseDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantLongTermEconomicAssumptionUsedInDeterminingPostRetirementHealthBenefitsAndRelatedExpenseDetails">
+        <link:definition>100970 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Significant Long-Term Economic Assumption Used in Determining Post-Retirement Health Benefits and Related Expense (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInVeteransCompensationAndBurialBenefitsDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfChangeInVeteransCompensationAndBurialBenefitsDetails">
+        <link:definition>100980 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Change in Veterans Compensation and Burial Benefits (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantEconomicAssumptionsUsedInDeterminingVeteransCompensationAndBurialBenefitsDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfSignificantEconomicAssumptionsUsedInDeterminingVeteransCompensationAndBurialBenefitsDetails">
+        <link:definition>100990 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Significant Economic Assumptions Used in Determining Veterans Compensation and Burial Benefits (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableStateAndLocalGovernmentDetails" id="Role_DisclosureEmployeeAndVeteranBenefitsPayableScheduleOfEmployeeAndVeteranBenefitsPayableStateAndLocalGovernmentDetails">
+        <link:definition>101000 - Disclosure - Employee and Veteran Benefits Payable - Schedule of Employee and Veteran Benefits Payable (State and Local Government) (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEnvironmentalAndDisposalLiabilitiesScheduleOfEnvironmentalAndDisposalLiabilitiesDetails" id="Role_DisclosureEnvironmentalAndDisposalLiabilitiesScheduleOfEnvironmentalAndDisposalLiabilitiesDetails">
+        <link:definition>101010 - Disclosure - Environmental and Disposal Liabilities - Schedule of Environmental and Disposal Liabilities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureEnvironmentalAndDisposalLiabilitiesAdditionalInformationDetails" id="Role_DisclosureEnvironmentalAndDisposalLiabilitiesAdditionalInformationDetails">
+        <link:definition>101020 - Disclosure - Environmental and Disposal Liabilities - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureBenefitsDueAndPayableScheduleOfBenefitsDueAndPayableDetails" id="Role_DisclosureBenefitsDueAndPayableScheduleOfBenefitsDueAndPayableDetails">
+        <link:definition>101030 - Disclosure - Benefits Due and Payable - Schedule of Benefits Due and Payable (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureBenefitsDueAndPayableScheduleOfBenefitsDueAndPayableUnderFederalGovernmentDetails" id="Role_DisclosureBenefitsDueAndPayableScheduleOfBenefitsDueAndPayableUnderFederalGovernmentDetails">
+        <link:definition>101040 - Disclosure - Benefits Due and Payable - Schedule of Benefits Due and Payable Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInsuranceAndGuaranteeProgramLiabilitiesScheduleOfInsuranceAndGuaranteeProgramLiabilitiesDetails" id="Role_DisclosureInsuranceAndGuaranteeProgramLiabilitiesScheduleOfInsuranceAndGuaranteeProgramLiabilitiesDetails">
+        <link:definition>101050 - Disclosure - Insurance and Guarantee Program Liabilities - Schedule of Insurance and Guarantee Program Liabilities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureInsuranceAndGuaranteeProgramLiabilitiesAdditionalInformationDetails" id="Role_DisclosureInsuranceAndGuaranteeProgramLiabilitiesAdditionalInformationDetails">
+        <link:definition>101060 - Disclosure - Insurance and Guarantee Program Liabilities - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherLiabilitiesScheduleOfOtherLiabilitiesDetails" id="Role_DisclosureOtherLiabilitiesScheduleOfOtherLiabilitiesDetails">
+        <link:definition>101070 - Disclosure - Other Liabilities - Schedule of Other Liabilities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherLiabilitiesScheduleOfOtherLiabilitiesUnderFederalGovernmentDetails" id="Role_DisclosureOtherLiabilitiesScheduleOfOtherLiabilitiesUnderFederalGovernmentDetails">
+        <link:definition>101080 - Disclosure - Other Liabilities - Schedule of Other Liabilities Under Federal Government (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOtherLiabilitiesAdditionalInformationDetails" id="Role_DisclosureOtherLiabilitiesAdditionalInformationDetails">
+        <link:definition>101090 - Disclosure - Other Liabilities - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosurePriorPeriodAdjustmentsSummaryOfEffectOfRestatementsIncreaseDecreaseInPreviouslyReportedValuesDetails" id="Role_DisclosurePriorPeriodAdjustmentsSummaryOfEffectOfRestatementsIncreaseDecreaseInPreviouslyReportedValuesDetails">
+        <link:definition>101100 - Disclosure - Prior-Period Adjustments - Summary of Effect of Restatements Increase (Decrease) in Previously Reported Values (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingenciesScheduleOfContingenciesDetails" id="Role_DisclosureContingenciesScheduleOfContingenciesDetails">
+        <link:definition>101110 - Disclosure - Contingencies - Schedule of Contingencies (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingenciesAdditionalInformationDetails" id="Role_DisclosureContingenciesAdditionalInformationDetails">
+        <link:definition>101120 - Disclosure - Contingencies - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingenciesScheduleOfLegalContingenciesDetails" id="Role_DisclosureContingenciesScheduleOfLegalContingenciesDetails">
+        <link:definition>101130 - Disclosure - Contingencies - Schedule of Legal Contingencies (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureContingenciesScheduleOfEnvironmentalAndDisposalContingenciesDetails" id="Role_DisclosureContingenciesScheduleOfEnvironmentalAndDisposalContingenciesDetails">
+        <link:definition>101140 - Disclosure - Contingencies - Schedule of Environmental and Disposal Contingencies (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitmentsSummaryOfCommitmentsDetails" id="Role_DisclosureCommitmentsSummaryOfCommitmentsDetails">
+        <link:definition>101150 - Disclosure - Commitments - Summary of Commitments (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitmentsScheduleOfLongTermOperatingLeasesDetails" id="Role_DisclosureCommitmentsScheduleOfLongTermOperatingLeasesDetails">
+        <link:definition>101160 - Disclosure - Commitments - Schedule of Long-term Operating Leases (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitmentsScheduleOfUndeliveredOrdersAndOtherCommitmentsAndRisksDetails" id="Role_DisclosureCommitmentsScheduleOfUndeliveredOrdersAndOtherCommitmentsAndRisksDetails">
+        <link:definition>101170 - Disclosure - Commitments - Schedule of Undelivered Orders and Other Commitments and Risks (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureCommitmentsAdditionalInformationDetails" id="Role_DisclosureCommitmentsAdditionalInformationDetails">
+        <link:definition>101180 - Disclosure - Commitments - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFundsFromDedicatedCollectionsScheduleOfFundsFromDedicatedCollectionsDetails" id="Role_DisclosureFundsFromDedicatedCollectionsScheduleOfFundsFromDedicatedCollectionsDetails">
+        <link:definition>101190 - Disclosure - Funds from Dedicated Collections - Schedule of Funds From Dedicated Collections (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFundsFromDedicatedCollectionsScheduleOfFederalGovernmentFundsDetails" id="Role_DisclosureFundsFromDedicatedCollectionsScheduleOfFederalGovernmentFundsDetails">
+        <link:definition>101200 - Disclosure - Funds from Dedicated Collections - Schedule of Federal Government Funds (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFundsFromDedicatedCollectionsAdditionalInformationDetails" id="Role_DisclosureFundsFromDedicatedCollectionsAdditionalInformationDetails">
+        <link:definition>101210 - Disclosure - Funds from Dedicated Collections - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFiduciaryActivitiesScheduleOfFiduciaryActivitiesDetails" id="Role_DisclosureFiduciaryActivitiesScheduleOfFiduciaryActivitiesDetails">
+        <link:definition>101220 - Disclosure - Fiduciary Activities - Schedule of Fiduciary Activities (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFiduciaryActivitiesScheduleOfFiduciaryNetAssetsDetails" id="Role_DisclosureFiduciaryActivitiesScheduleOfFiduciaryNetAssetsDetails">
+        <link:definition>101230 - Disclosure - Fiduciary Activities - Schedule of Fiduciary Net Assets (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureFiduciaryActivitiesAdditionalInformationDetails" id="Role_DisclosureFiduciaryActivitiesAdditionalInformationDetails">
+        <link:definition>101240 - Disclosure - Fiduciary Activities - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureStewardshipLandAndHeritageAssetsSummaryOfRevenuesGeneratedFromResourceExtractionOnFederalLandsDetails" id="Role_DisclosureStewardshipLandAndHeritageAssetsSummaryOfRevenuesGeneratedFromResourceExtractionOnFederalLandsDetails">
+        <link:definition>101250 - Disclosure - Stewardship Land and Heritage Assets - Summary of Revenues Generated from Resource Extraction on Federal Lands (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureIntergovernmentalTransfersSummaryOfFederalGrantAndNonGrantAssistanceToTerritoriesAndStateAndLocalGovernmentsDetails" id="Role_DisclosureIntergovernmentalTransfersSummaryOfFederalGrantAndNonGrantAssistanceToTerritoriesAndStateAndLocalGovernmentsDetails">
+        <link:definition>101260 - Disclosure - Intergovernmental Transfers - Summary of Federal Grant and Non-Grant Assistance to Territories and State and Local Governments (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureIntergovernmentalTransfersSummaryOfFederalDebtSecuritiesHeldAsInvestmentsByGovernmentAccountsDetails" id="Role_DisclosureIntergovernmentalTransfersSummaryOfFederalDebtSecuritiesHeldAsInvestmentsByGovernmentAccountsDetails">
+        <link:definition>101270 - Disclosure - Intergovernmental Transfers - Summary of Federal Debt Securities Held as Investments by Government Accounts (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureOffsettingAmountsScheduleOfKeyOffsettingOfGrossRevenueAndExpendituresDetails" id="Role_DisclosureOffsettingAmountsScheduleOfKeyOffsettingOfGrossRevenueAndExpendituresDetails">
+        <link:definition>101280 - Disclosure - Offsetting Amounts - Schedule of Key Offsetting of Gross Revenue and Expenditures (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://usafacts.org/20191231/taxonomy/role/DisclosureSubsequentEventAdditionalInformationDetails" id="Role_DisclosureSubsequentEventAdditionalInformationDetails">
+        <link:definition>101290 - Disclosure - Subsequent Event - Additional Information (Details)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:element id="usaf_CafrRevenueFromTaxes" name="CafrRevenueFromTaxes" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_NonTaxRevenues" name="NonTaxRevenues" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrRevenuesNet" name="CafrRevenuesNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrExpenditures" name="CafrExpenditures" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CashAndCashEquivalentsAndRestrictedCash" name="CashAndCashEquivalentsAndRestrictedCash" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_InternationalMonetaryAssets" name="InternationalMonetaryAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_OtherMonetaryAssets" name="OtherMonetaryAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NonPensionCashAndOtherMonetaryAssets" name="NonPensionCashAndOtherMonetaryAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_PensionCashAndOtherMonetaryAssets" name="PensionCashAndOtherMonetaryAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrCapitalAssetsBeingDepreciated" name="CafrCapitalAssetsBeingDepreciated" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrAccumulatedDepreciationAndAmortization" name="CafrAccumulatedDepreciationAndAmortization" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrLiabilities" name="CafrLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FMCCMortgageLoansNet" name="FMCCMortgageLoansNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FNMSeniorPreferredStockValue" name="FNMSeniorPreferredStockValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FNMOtherEquity" name="FNMOtherEquity" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FMCCSeniorPreferredStock" name="FMCCSeniorPreferredStock" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FMCCOtherEquity" name="FMCCOtherEquity" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CashAndOtherMonetaryAssets" name="CashAndOtherMonetaryAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_AccountsAndTaxesReceivableNet" name="AccountsAndTaxesReceivableNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrLoansReceivable" name="CafrLoansReceivable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrInventories" name="CafrInventories" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrCapitalAssets" name="CafrCapitalAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DebtAndEquitySecurities" name="DebtAndEquitySecurities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_InvestmentsInGovernmentSponsoredEnterprises" name="InvestmentsInGovernmentSponsoredEnterprises" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrOtherAssets" name="CafrOtherAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FundBalanceWithTreasury" name="FundBalanceWithTreasury" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_InvestmentsInTreasurySecuritiesNetOfUnamortizedPremiumsDiscounts" name="InvestmentsInTreasurySecuritiesNetOfUnamortizedPremiumsDiscounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_OtherFederalAssets" name="OtherFederalAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NonFederalAssets" name="NonFederalAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrAccountsPayable" name="CafrAccountsPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DebtSecuritiesHeldByPublicAndAccruedInterest" name="DebtSecuritiesHeldByPublicAndAccruedInterest" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrEnvironmentalAndDisposalLiabilities" name="CafrEnvironmentalAndDisposalLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_BenefitsDueAndPayable" name="BenefitsDueAndPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilities" name="InsuranceAndGuaranteeProgramLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrLoanGuaranteeLiabilities" name="CafrLoanGuaranteeLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrOtherLiabilities" name="CafrOtherLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DueAndPayableToBeneficiaries" name="DueAndPayableToBeneficiaries" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OtherFederalLiabilities" name="OtherFederalLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OtherNonFederalLiabilities" name="OtherNonFederalLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrNetPosition" name="CafrNetPosition" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrRevenueFromInvestmentIncome" name="CafrRevenueFromInvestmentIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OtherTaxesAndReceipts" name="OtherTaxesAndReceipts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_OtherChangesInFundBalance" name="OtherChangesInFundBalance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_ProgramGrossCostsAndNonProgramExpenses" name="ProgramGrossCostsAndNonProgramExpenses" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrProgramRevenuesNet" name="CafrProgramRevenuesNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OffsettingRevenue" name="OffsettingRevenue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OffsettingExpenditures" name="OffsettingExpenditures" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_TransferPaymentsToIndividualsOtherThanPersonnelAndSubsidies" name="TransferPaymentsToIndividualsOtherThanPersonnelAndSubsidies" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_PaymentsToOthersForGoodsAndServices" name="PaymentsToOthersForGoodsAndServices" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrExpendituresForCapitalOutlay" name="CafrExpendituresForCapitalOutlay" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrExcessDeficiencyOfRevenuesOverUnderExpenditures" name="CafrExcessDeficiencyOfRevenuesOverUnderExpenditures" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_JusticeAndDomesticTranquilityMember" name="JusticeAndDomesticTranquilityMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CommonDefenseMember" name="CommonDefenseMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GeneralWelfareMember" name="GeneralWelfareMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_BlessingsOfLibertyMember" name="BlessingsOfLibertyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GeneralGovernmentAndOtherMember" name="GeneralGovernmentAndOtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrAssets" name="CafrAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_StewardshipLandAndHeritageAssets" name="StewardshipLandAndHeritageAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CashAndOtherMonetaryAssetsDisclosureTextBlock" name="CashAndOtherMonetaryAssetsDisclosureTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_CashAndOtherMonetaryAssetsAbstract" name="CashAndOtherMonetaryAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AccountsAndTaxesReceivableNetTextBlock" name="AccountsAndTaxesReceivableNetTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_LoansReceivableAndLoanGuaranteeLiabilitiesNetDisclosureTextBlock" name="LoansReceivableAndLoanGuaranteeLiabilitiesNetDisclosureTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_InvestmentsInGovernmentSponsoredEnterprisesTextBlock" name="InvestmentsInGovernmentSponsoredEnterprisesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_InvestmentsInGovernmentSponsoredEnterprisesAbstract" name="InvestmentsInGovernmentSponsoredEnterprisesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_EnvironmentalAndDisposalLiabilitiesTextBlock" name="EnvironmentalAndDisposalLiabilitiesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_EnvironmentalAndDisposalLiabilitiesAbstract" name="EnvironmentalAndDisposalLiabilitiesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_BenefitsDueAndPayableTextBlock" name="BenefitsDueAndPayableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_BenefitsDueAndPayableAbstract" name="BenefitsDueAndPayableAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilitiesTextBlock" name="InsuranceAndGuaranteeProgramLiabilitiesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilitiesAbstract" name="InsuranceAndGuaranteeProgramLiabilitiesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CommitmentsDisclosureAbstract" name="CommitmentsDisclosureAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FundFromDedicatedCollectionsDisclosureTextBlock" name="FundFromDedicatedCollectionsDisclosureTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsAbstract" name="FundsFromDedicatedCollectionsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryActivitiesTextBlock" name="FiduciaryActivitiesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_FiduciaryActivitiesAbstract" name="FiduciaryActivitiesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_StewardshipLandAndHeritageAssetsTextBlock" name="StewardshipLandAndHeritageAssetsTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_StewardshipLandAndHeritageAssetsAbstract" name="StewardshipLandAndHeritageAssetsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_IntergovernmentalTransfersDisclosureTextBlock" name="IntergovernmentalTransfersDisclosureTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_IntergovernmentalTransfersAbstract" name="IntergovernmentalTransfersAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OffsettingRevenuesExpendituresTextBlock" name="OffsettingRevenuesExpendituresTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfCashAndOtherMonetaryAssetsTableTextBlock" name="ScheduleOfCashAndOtherMonetaryAssetsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_CashAndOtherMonetaryAssetsLineItems" name="CashAndOtherMonetaryAssetsLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CashAndOtherMonetaryAssetsTable" name="CashAndOtherMonetaryAssetsTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfAccountsAndTaxesReceivableNetTableTextBlock" name="ScheduleOfAccountsAndTaxesReceivableNetTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfLoanGuaranteeLiabilitiesTableTextBlock" name="ScheduleOfLoanGuaranteeLiabilitiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfDirectLoansAndDefaultedGuaranteedLoansTableTextBlock" name="ScheduleOfDirectLoansAndDefaultedGuaranteedLoansTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfLoanGuaranteesTableTextBlock" name="ScheduleOfLoanGuaranteesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfInventoryAndRelatedPropertyNetTableTextBlock" name="ScheduleOfInventoryAndRelatedPropertyNetTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_InventoriesAndRelatedPropertyNetLineItems" name="InventoriesAndRelatedPropertyNetLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_InventoriesAndRelatedPropertyNetTable" name="InventoriesAndRelatedPropertyNetTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfDebtAndEquitySecuritiesTableTextBlock" name="ScheduleOfDebtAndEquitySecuritiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_DebtAndEquitySecuritiesLineItems" name="DebtAndEquitySecuritiesLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DebtAndEquitySecuritiesTable" name="DebtAndEquitySecuritiesTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfHeldToMaturityAvailableForSaleAndTradingSecuritiesTableTextBlock" name="ScheduleOfHeldToMaturityAvailableForSaleAndTradingSecuritiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfDebtAndEquitySecuritiesByAgencyTableTextBlock" name="ScheduleOfDebtAndEquitySecuritiesByAgencyTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfPensionAndNonPensionDebtAndEquitySecuritiesTableTextBlock" name="ScheduleOfPensionAndNonPensionDebtAndEquitySecuritiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfInvestmentsInGovernmentSponsoredEnterprisesTableTextBlock" name="ScheduleOfInvestmentsInGovernmentSponsoredEnterprisesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_GovernmentSponsoredEntityAxis" name="GovernmentSponsoredEntityAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GovernmentSponsoredEntityDomain" name="GovernmentSponsoredEntityDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalNationalMortgageAssociationFannieMaeMember" name="FederalNationalMortgageAssociationFannieMaeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalHomeLoanMortgageCorporationFreddieMacMember" name="FederalHomeLoanMortgageCorporationFreddieMacMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AccountsPayableLineItems" name="AccountsPayableLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfAccountsPayableTable" name="ScheduleOfAccountsPayableTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfEmployeeAndVeteranBenefitsPayableTableTextblock" name="ScheduleOfEmployeeAndVeteranBenefitsPayableTableTextblock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfFederalEmployeeAndVeteranBenefitsPayableTableTextBlock" name="ScheduleOfFederalEmployeeAndVeteranBenefitsPayableTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_SummaryOfChangeInPostRetirementHealthAndAccruedBenefitsTableTextBlock" name="SummaryOfChangeInPostRetirementHealthAndAccruedBenefitsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PensionLiabilityAndRelatedExpenseTableTextBlock" name="PensionLiabilityAndRelatedExpenseTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PostRetirementHealthBenefitsAndRelatedExpenseTableTextBlock" name="PostRetirementHealthBenefitsAndRelatedExpenseTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfChangeInVeteransCompensationAndBurialBenefitsTableTextBlock" name="ScheduleOfChangeInVeteransCompensationAndBurialBenefitsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfVeteransCompensationAndBurialBenefitsTableTextBlock" name="ScheduleOfVeteransCompensationAndBurialBenefitsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfStateAndLocalGovernmentEmployeeAndVeteranBenefitsPayableTableTextBlock" name="ScheduleOfStateAndLocalGovernmentEmployeeAndVeteranBenefitsPayableTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_BenefitsDueAndPayableTableTextBlock" name="BenefitsDueAndPayableTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_BenefitsDueAndPayableLineItems" name="BenefitsDueAndPayableLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_BenefitsDueAndPayableTable" name="BenefitsDueAndPayableTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilitiesTableTextBlock" name="InsuranceAndGuaranteeProgramLiabilitiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilitiesLineItems" name="InsuranceAndGuaranteeProgramLiabilitiesLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_InsuranceAndGuaranteeProgramLiabilitiesTable" name="InsuranceAndGuaranteeProgramLiabilitiesTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherLiabilitiesLineItems" name="OtherLiabilitiesLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherLiabilitiesTable" name="OtherLiabilitiesTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfLegalContingenciesTableTextBlock" name="ScheduleOfLegalContingenciesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfEnvironmentalAndDisposalContingenciesTableTextBlock" name="ScheduleOfEnvironmentalAndDisposalContingenciesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_SummaryOfCommitmentsTableTextBlock" name="SummaryOfCommitmentsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfLongTermOperatingLeaseCommitmentTableTextBlock" name="ScheduleOfLongTermOperatingLeaseCommitmentTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfUndeliveredOrdersAndOtherCommitmentsAndRisksTableTextBlock" name="ScheduleOfUndeliveredOrdersAndOtherCommitmentsAndRisksTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfFundsFromDedicatedCollectionsTableTextBlock" name="ScheduleOfFundsFromDedicatedCollectionsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsLineItems" name="FundsFromDedicatedCollectionsLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsTable" name="FundsFromDedicatedCollectionsTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfFederalGovernmentFundsTableTextBlock" name="ScheduleOfFederalGovernmentFundsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfFiduciaryActivitiesTableTextBlock" name="ScheduleOfFiduciaryActivitiesTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfFiduciaryNetAssetsTableTextBlock" name="ScheduleOfFiduciaryNetAssetsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_SummaryOfRevenuesGeneratedFromResourceExtractionOnFederalLandsTableTextBlock" name="SummaryOfRevenuesGeneratedFromResourceExtractionOnFederalLandsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_SummaryOfFederalGrantAndNonGrantTransfersTableTextBlock" name="SummaryOfFederalGrantAndNonGrantTransfersTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_SummaryOfFederalDebtSecuritiesHeldAsInvestmentsByGovernmentsAccountsTableTextBlock" name="SummaryOfFederalDebtSecuritiesHeldAsInvestmentsByGovernmentsAccountsTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfKeyOffsettingOfGrossRevenueAndExpendituresTableTextBlock" name="ScheduleOfKeyOffsettingOfGrossRevenueAndExpendituresTableTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_CafrCashAndCashEquivalents" name="CafrCashAndCashEquivalents" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrRestrictedCash" name="CafrRestrictedCash" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_USTreasuryMember" name="USTreasuryMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherAgenciesMember" name="OtherAgenciesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrNetCashProvidedByUsedInOperatingActivities" name="CafrNetCashProvidedByUsedInOperatingActivities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NetCashProvidedByUsedInOperatingActivitiesPercentageIncreaseDecrease" name="NetCashProvidedByUsedInOperatingActivitiesPercentageIncreaseDecrease" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_DefenseSecurityCooperationAgencyMember" name="DefenseSecurityCooperationAgencyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MonetaryAssetsReserve" name="MonetaryAssetsReserve" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_SpecialDrawingRightsHoldingsAmount" name="SpecialDrawingRightsHoldingsAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_SpecialDrawingRightsCertificatesOutstanding" name="SpecialDrawingRightsCertificatesOutstanding" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_TimeAndSavingsDepositsMember" name="TimeAndSavingsDepositsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_SecurityRepurchaseAgreementsMember" name="SecurityRepurchaseAgreementsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CheckableDepositsAndCurrencyMember" name="CheckableDepositsAndCurrencyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherMember" name="OtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrAllowanceForDoubtfulAccounts" name="CafrAllowanceForDoubtfulAccounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_TaxesReceivableAbstract" name="TaxesReceivableAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_IncomeTaxReceivableGross" name="IncomeTaxReceivableGross" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CafrTaxAllowances" name="CafrTaxAllowances" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrInterestReceivable" name="CafrInterestReceivable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_USTreasuryHHSAndSSAMember" name="USTreasuryHHSAndSSAMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PercentageOfAccountsAndTaxesReceivable" name="PercentageOfAccountsAndTaxesReceivable" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_GrossReceivablesRelatedToCriminalRestitutionOrders" name="GrossReceivablesRelatedToCriminalRestitutionOrders" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CollectibleAmountOfGrossReceivablesRelatedToCriminalRestitutionOrders" name="CollectibleAmountOfGrossReceivablesRelatedToCriminalRestitutionOrders" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_MortgagePensionLoanMember" name="MortgagePensionLoanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_LongTermCostOfIncomeFromDirectLoansAndDefaultedGuaranteedLoans" name="LongTermCostOfIncomeFromDirectLoansAndDefaultedGuaranteedLoans" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_SubsidyExpenseIncomeOfDirectLoansAndDefaultedGuaranteedLoans" name="SubsidyExpenseIncomeOfDirectLoansAndDefaultedGuaranteedLoans" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_LoanGuaranteeOutstandingAmount" name="LoanGuaranteeOutstandingAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalDirectStudentLoansEducationMember" name="FederalDirectStudentLoansEducationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherProgramMember" name="AllOtherProgramMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_SubsidyExpenseIncome" name="SubsidyExpenseIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_PrincipalAmountOutstandingOnLoansUnderGuarantee" name="PrincipalAmountOutstandingOnLoansUnderGuarantee" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_PrincipalLoanAmountGuaranteedByUSGovernment" name="PrincipalLoanAmountGuaranteedByUSGovernment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalHousingAdministrationLoansDepartmentOfHousingAndUrbanDevelopmentMember" name="FederalHousingAdministrationLoansDepartmentOfHousingAndUrbanDevelopmentMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherGuaranteedLoanProgramsMember" name="AllOtherGuaranteedLoanProgramsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_EducationLoanDisbursement" name="EducationLoanDisbursement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_IncreasedDecreasedEducationLoansReceivableNet" name="IncreasedDecreasedEducationLoansReceivableNet" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_IncreaseDecreaseLoanGuaranteeOutstandingAmount" name="IncreaseDecreaseLoanGuaranteeOutstandingAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_GuaranteedLoanTerminationsPartiallyOffset" name="GuaranteedLoanTerminationsPartiallyOffset" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_InventoryAndOperatingMaterialAndSuppliesHeldForRepair" name="InventoryAndOperatingMaterialAndSuppliesHeldForRepair" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_InventoryPurchasedForResale" name="InventoryPurchasedForResale" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_StockpileMaterialsHeldInReserveForFutureUse" name="StockpileMaterialsHeldInReserveForFutureUse" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DepartmentOfDefenseMember" name="DepartmentOfDefenseMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherAgenciesMember" name="AllOtherAgenciesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PercentageOfNetValueOfResaleInventoryUnderMovingAverageCostMethod" name="PercentageOfNetValueOfResaleInventoryUnderMovingAverageCostMethod" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PercentageOfNetValueOfResaleInventoryUnderHistoricalCostMethod" name="PercentageOfNetValueOfResaleInventoryUnderHistoricalCostMethod" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PercentageOfNetValueOfPropertyPlantAndEquipmentOwned" name="PercentageOfNetValueOfPropertyPlantAndEquipmentOwned" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_MultipleAgenciesMember" name="MultipleAgenciesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_StructuresMember" name="StructuresMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_TangibleIntellectualPropertyMember" name="TangibleIntellectualPropertyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_EquitySecuritiesHeldToMaturityCost" name="EquitySecuritiesHeldToMaturityCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_EquitySecuritiesHeldToMaturityGainLoss" name="EquitySecuritiesHeldToMaturityGainLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_EquitySecuritiesHeldToMaturity" name="EquitySecuritiesHeldToMaturity" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_EquitySecuritiesTradingUnrealizedGain" name="EquitySecuritiesTradingUnrealizedGain" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_HeldToMaturityAmortizedCost" name="HeldToMaturityAmortizedCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_HeldToMaturityGainLoss" name="HeldToMaturityGainLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_HeldToMaturityBookValue" name="HeldToMaturityBookValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_TradingSecuritiesGainLoss" name="TradingSecuritiesGainLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DebtSecuritiesTradingUnrealizedGains" name="DebtSecuritiesTradingUnrealizedGains" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CorporateAndOtherBondsMember" name="CorporateAndOtherBondsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UnitTrustMember" name="UnitTrustMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherEquitySecuritiesMember" name="OtherEquitySecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_RailroadRetirementBoardMember" name="RailroadRetirementBoardMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_HeldToMaturityAvailableForSaleOrTradingMember" name="HeldToMaturityAvailableForSaleOrTradingMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PensionBenefitGuarantyCorporationMember" name="PensionBenefitGuarantyCorporationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_TennesseeValleyAuthorityMember" name="TennesseeValleyAuthorityMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfTreasuryMember" name="DepartmentOfTreasuryMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherAgencyMember" name="OtherAgencyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PercentageOfReportedDebtAndEquitySecurities" name="PercentageOfReportedDebtAndEquitySecurities" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_TennesseeValleyAuthorityRetirementSystemMember" name="TennesseeValleyAuthorityRetirementSystemMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CorporateEquitiesMember" name="CorporateEquitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CorporateAndForeignBondsMember" name="CorporateAndForeignBondsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AgencyAndGovernmentSponsoredEnterpriseBackedSecuritiesMember" name="AgencyAndGovernmentSponsoredEnterpriseBackedSecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GovernmentSponsoredEntityMember" name="GovernmentSponsoredEntityMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FannieMaeSeniorPreferredStockMember" name="FannieMaeSeniorPreferredStockMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FreddieMacSeniorPreferredStockMember" name="FreddieMacSeniorPreferredStockMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FannieMaeWarrantsCommonStockMember" name="FannieMaeWarrantsCommonStockMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FreddieMacWarrantsCommonStockMember" name="FreddieMacWarrantsCommonStockMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NonVotingVariableLiquidationPreferenceSeniorPreferredStockSharesReceived" name="NonVotingVariableLiquidationPreferenceSeniorPreferredStockSharesReceived" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NonVotingVariableLiquidationPreferenceSeniorPreferredStockValuePerShare" name="NonVotingVariableLiquidationPreferenceSeniorPreferredStockValuePerShare" type="num:perShareItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NominalCostPercentageOfNonTransferableWarrantOnFullyDilutedBasisOfCommonStock" name="NominalCostPercentageOfNonTransferableWarrantOnFullyDilutedBasisOfCommonStock" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_CapitalReserveAmountUnderPurchaseAgreement" name="CapitalReserveAmountUnderPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DeclineInCapitalReserveAmountUnderPurchaseAgreement" name="DeclineInCapitalReserveAmountUnderPurchaseAgreement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_SeniorPreferredStockPurchaseAgreementsMember" name="SeniorPreferredStockPurchaseAgreementsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GovernmentSponsorEnterpriseAndSeniorPreferredStockPurchaseAgreementMember" name="GovernmentSponsorEnterpriseAndSeniorPreferredStockPurchaseAgreementMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NonVotingVariableLiquidationPreferenceSeniorPreferredStockValue" name="NonVotingVariableLiquidationPreferenceSeniorPreferredStockValue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_MaximumRemainingContractualCommitment" name="MaximumRemainingContractualCommitment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_MaximumBalanceOfRetainedMortgagePortfolioReductionPercentage" name="MaximumBalanceOfRetainedMortgagePortfolioReductionPercentage" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_MaximumBalanceOfRetainedMortgagePortfolio" name="MaximumBalanceOfRetainedMortgagePortfolio" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_IncrementalFeesPercentage" name="IncrementalFeesPercentage" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_IncrementalFeesRemittedToTreasury" name="IncrementalFeesRemittedToTreasury" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FMCCOtherDebtLongTermAndShortTermCombinedAmount" name="FMCCOtherDebtLongTermAndShortTermCombinedAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OtherAssetsLineItems" name="OtherAssetsLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherAssetsTable" name="OtherAssetsTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrNameOfOtherAssetsAxis" name="CafrNameOfOtherAssetsAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrNameOfOtherAssetsDomain" name="CafrNameOfOtherAssetsDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AdvancesAndPrepaymentsMember" name="AdvancesAndPrepaymentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_RegulatoryAssetsMember" name="RegulatoryAssetsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FDICReceivableFromResolutionActivityMember" name="FDICReceivableFromResolutionActivityMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfVeteransAffairsMember" name="DepartmentOfVeteransAffairsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfJusticeMember" name="DepartmentOfJusticeMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfEducationMember" name="DepartmentOfEducationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfEnergyMember" name="DepartmentOfEnergyMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOtherMember" name="DepartmentOtherMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NetUnamortizedDiscounts" name="NetUnamortizedDiscounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrAccruedInterestPayable" name="CafrAccruedInterestPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_ChangeInPeriodBalancesMember" name="ChangeInPeriodBalancesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_USTreasuryInflationProtectedSecuritiesMember" name="USTreasuryInflationProtectedSecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_USTreasuryFloatingRateNotesMember" name="USTreasuryFloatingRateNotesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MarketableSecuritiesAverageInterestRate" name="MarketableSecuritiesAverageInterestRate" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NonmarketableSecuritiesAverageInterestRate" name="NonmarketableSecuritiesAverageInterestRate" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_DebtSubjectToStatutoryDebtLimit" name="DebtSubjectToStatutoryDebtLimit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_MunicipalSecuritiesMember" name="MunicipalSecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MunicipalSecuritiesPensionsMember" name="MunicipalSecuritiesPensionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PensionAndAccruedBenefits" name="PensionAndAccruedBenefits" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrOPEBLiability" name="CafrOPEBLiability" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CivilianMember" name="CivilianMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MilitaryMember" name="MilitaryMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DefinedBenefitPlanNormalCosts" name="DefinedBenefitPlanNormalCosts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DefinedBenefitPlanInterestOnLiability" name="DefinedBenefitPlanInterestOnLiability" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DefinedBenefitPlanActuarialGainsLossesFromExperience" name="DefinedBenefitPlanActuarialGainsLossesFromExperience" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DefinedBenefitPlanPensionExpense" name="DefinedBenefitPlanPensionExpense" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DefinedBenefitPlanPensionExpenseAbstract" name="DefinedBenefitPlanPensionExpenseAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DefinedBenefitPlanPostRetirementHealthBenefitsExpense" name="DefinedBenefitPlanPostRetirementHealthBenefitsExpense" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DefinedBenefitPlanClaimsPaid" name="DefinedBenefitPlanClaimsPaid" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DefinedBenefitPlanPostRetirementHealthBenefitsExpenseAbstract" name="DefinedBenefitPlanPostRetirementHealthBenefitsExpenseAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AccruedBenefitsPayable" name="AccruedBenefitsPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_PostalServiceRetireeHealthBenefitsMember" name="PostalServiceRetireeHealthBenefitsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfDefenseMilitaryRetirementFundMember" name="DepartmentOfDefenseMilitaryRetirementFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_VeteransCompensationAndBurialBenefitsMember" name="VeteransCompensationAndBurialBenefitsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfDefenseMedicareEligibleRetireeHealthCareFundMember" name="DepartmentOfDefenseMedicareEligibleRetireeHealthCareFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DefinedBenefitPlanAssumptionsUsedCalculatingBenefitObligationRateOfInflation" name="DefinedBenefitPlanAssumptionsUsedCalculatingBenefitObligationRateOfInflation" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_DefinedBenefitPlanAssumptionsUsedCalculatingBenefitObligationCostOfLivingAdjustment" name="DefinedBenefitPlanAssumptionsUsedCalculatingBenefitObligationCostOfLivingAdjustment" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_FederalEmployeesRetirementSystemMember" name="FederalEmployeesRetirementSystemMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CivilServiceRetirementSystemMember" name="CivilServiceRetirementSystemMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CivilianEmployeesMember" name="CivilianEmployeesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MilitaryEmployeesMember" name="MilitaryEmployeesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DefinedBenefitPlanSingleEquivalentMedicalTrendRate" name="DefinedBenefitPlanSingleEquivalentMedicalTrendRate" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_TermsOfTreasuryNominalCouponIssuesAndMethodologyYield" name="TermsOfTreasuryNominalCouponIssuesAndMethodologyYield" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfFixedIncomeFunds" name="NumberOfFixedIncomeFunds" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfStockFunds" name="NumberOfStockFunds" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfLifecycleFunds" name="NumberOfLifecycleFunds" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NonmarketableTreasurySecurities" name="NonmarketableTreasurySecurities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_IncreaseDecreaseInPensionAndAccruedBenefitsPayable" name="IncreaseDecreaseInPensionAndAccruedBenefitsPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_ExpensesForFutureRetireeHealthBenefits" name="ExpensesForFutureRetireeHealthBenefits" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_LiabilityForFutureRetireeHealthBenefits" name="LiabilityForFutureRetireeHealthBenefits" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_AgeForReserveRetirees" name="AgeForReserveRetirees" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_QualifiedPeriodOfServiceForReserveRetirees" name="QualifiedPeriodOfServiceForReserveRetirees" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PeriodOfReductionInReserveRetirementAgeBasedOnCertainActiveDutyServiceServed" name="PeriodOfReductionInReserveRetirementAgeBasedOnCertainActiveDutyServiceServed" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ThresholdPeriodOfCertainActiveDutyServiceServedForReductionInReserveRetirementAge" name="ThresholdPeriodOfCertainActiveDutyServiceServedForReductionInReserveRetirementAge" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_VestingBenefitsBeforeNonDisabledRetirement" name="VestingBenefitsBeforeNonDisabledRetirement" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_NumberOfPopulationsInMilitaryRetirementSystem" name="NumberOfPopulationsInMilitaryRetirementSystem" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_MaximumThresholdAgeLimitForReductionInReserveRetirementAge" name="MaximumThresholdAgeLimitForReductionInReserveRetirementAge" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfSourcesOfIncome" name="NumberOfSourcesOfIncome" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_DefinedBenefitPlanCurrentPeriodBenefitExpense" name="DefinedBenefitPlanCurrentPeriodBenefitExpense" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_DefinedBenefitPlanCurrentPeriodBenefitExpenseAbstract" name="DefinedBenefitPlanCurrentPeriodBenefitExpenseAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_VeteransCompensationMember" name="VeteransCompensationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_BurialBenefitsMember" name="BurialBenefitsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DefinedBenefitPlanAverageMedicalCareCostPerYear" name="DefinedBenefitPlanAverageMedicalCareCostPerYear" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_EnvironmentalRestorationMember" name="EnvironmentalRestorationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherDepartmentOfDefenseMember" name="OtherDepartmentOfDefenseMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MinimumNumberOfNuclearTests" name="MinimumNumberOfNuclearTests" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NuclearWarheadsManufacturedDescription" name="NuclearWarheadsManufacturedDescription" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_EstimatePeriod" name="EstimatePeriod" type="xbrli:durationItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_EnvironmentalUnrecognizedCleanupCostsForGeneralPropertyPlantAndEquipment" name="EnvironmentalUnrecognizedCleanupCostsForGeneralPropertyPlantAndEquipment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_OldAgeAndSurvivorsInsuranceMember" name="OldAgeAndSurvivorsInsuranceMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GrantsToStatesForMedicaidMember" name="GrantsToStatesForMedicaidMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_SupplementaryMedicalInsuranceMember" name="SupplementaryMedicalInsuranceMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_HospitalInsuranceMember" name="HospitalInsuranceMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PBGCBenefitPensionPlansMember" name="PBGCBenefitPensionPlansMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherInsuranceAndGuaranteeProgramsMember" name="OtherInsuranceAndGuaranteeProgramsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UnearnedRevenueAndAssetsHeldForOthersAbstract" name="UnearnedRevenueAndAssetsHeldForOthersAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UnearnedFeesForNuclearWasteDisposalAndOtherUnearnedRevenue" name="UnearnedFeesForNuclearWasteDisposalAndOtherUnearnedRevenue" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_AssetsHeldOnBehalfOfOthers" name="AssetsHeldOnBehalfOfOthers" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_UnearnedRevenueAndAssetsHeldForOthers" name="UnearnedRevenueAndAssetsHeldForOthers" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrAccruedWagesAndRelatedLiabilitiesPayable" name="CafrAccruedWagesAndRelatedLiabilitiesPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_EmployeeRelatedLiabilities" name="EmployeeRelatedLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_InternationalMonetaryLiabilitiesAndGoldCertificatesAbstract" name="InternationalMonetaryLiabilitiesAndGoldCertificatesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ExchangeStabilizationFund" name="ExchangeStabilizationFund" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_GoldCertificates" name="GoldCertificates" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_InternationalMonetaryLiabilitiesAndGoldCertificates" name="InternationalMonetaryLiabilitiesAndGoldCertificates" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_SubsidiesAndGrants" name="SubsidiesAndGrants" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_MiscellaneousLiabilitiesAbstract" name="MiscellaneousLiabilitiesAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_LegalAndOtherContingencies" name="LegalAndOtherContingencies" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_MiscellaneousLiabilities" name="MiscellaneousLiabilities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_SelectedDOEContractorsAndDCEmployeesMember" name="SelectedDOEContractorsAndDCEmployeesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UnearnedRevenueFromFeesForNuclearWasteDisposalAndInterestIncome" name="UnearnedRevenueFromFeesForNuclearWasteDisposalAndInterestIncome" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_AssetsHeldForFundsCollectedOnOutstandingPostalMoneyOrdersAndUndeliveredArticles" name="AssetsHeldForFundsCollectedOnOutstandingPostalMoneyOrdersAndUndeliveredArticles" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DepartmentOfTransportationEducationAndHealthAndHumanServicesMember" name="DepartmentOfTransportationEducationAndHealthAndHumanServicesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GoldPledgedAsCollateralForGoldCertificates" name="GoldPledgedAsCollateralForGoldCertificates" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_SubsidiesPayable" name="SubsidiesPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrGrantsPayable" name="CafrGrantsPayable" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalDepositInsuranceCorporationMember" name="FederalDepositInsuranceCorporationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepositInsuranceFundMember" name="DepositInsuranceFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NationalCreditUnionAdministrationMember" name="NationalCreditUnionAdministrationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NationalCreditUnionShareInsuranceFundMember" name="NationalCreditUnionShareInsuranceFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AmericanInternationalGroupIncorporationMember" name="AmericanInternationalGroupIncorporationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_StarrInternationalCoIncVUnitedStatesMember" name="StarrInternationalCoIncVUnitedStatesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DamagesForAllegedExposureToRadioactiveAndToxicSubstancesMember" name="DamagesForAllegedExposureToRadioactiveAndToxicSubstancesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_EstimatedInsuredSharesAmount" name="EstimatedInsuredSharesAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_LossContingencyProbableLoss" name="LossContingencyProbableLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_EnvironmentalAndDisposalContingenciesMember" name="EnvironmentalAndDisposalContingenciesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_LossContingencyEstimatedLiability" name="LossContingencyEstimatedLiability" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_NumberOfStandardContracts" name="NumberOfStandardContracts" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_CafrGrantsContributionsAndDonationsFromFederalGovernmentalEntities" name="CafrGrantsContributionsAndDonationsFromFederalGovernmentalEntities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_MedicaidAmounts" name="MedicaidAmounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CommitmentsDisclosureLineItems" name="CommitmentsDisclosureLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CommitmentsDisclosureTable" name="CommitmentsDisclosureTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GeneralServicesAdministrationMember" name="GeneralServicesAdministrationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_USPostalServiceMember" name="USPostalServiceMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherConsolidatedEntitiesMember" name="OtherConsolidatedEntitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UndeliveredOrders" name="UndeliveredOrders" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_UndeliveredOrdersAndOtherCommitmentsAndRisksLineItems" name="UndeliveredOrdersAndOtherCommitmentsAndRisksLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UndeliveredOrdersAndOtherCommitmentsAndRisksTable" name="UndeliveredOrdersAndOtherCommitmentsAndRisksTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfTransportationMember" name="DepartmentOfTransportationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfHealthAndHumanServicesMember" name="DepartmentOfHealthAndHumanServicesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_DepartmentOfAgricultureMember" name="DepartmentOfAgricultureMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_USParticipationInInternationalMonetaryFundMember" name="USParticipationInInternationalMonetaryFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CallableCapitalSubscriptionsForMultilateralDevelopmentBanksMember" name="CallableCapitalSubscriptionsForMultilateralDevelopmentBanksMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherCommitmentsMember" name="AllOtherCommitmentsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_IncreaseEstimatesInNonFederalUndeliveredOrders" name="IncreaseEstimatesInNonFederalUndeliveredOrders" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_AggregateInsureLossThresholdAmount" name="AggregateInsureLossThresholdAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_AnnualIncreaseOfInsuredLossThreshold" name="AnnualIncreaseOfInsuredLossThreshold" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_TerrorismRiskInsuranceProgramClaims" name="TerrorismRiskInsuranceProgramClaims" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FundsFromDedicatedCollections" name="FundsFromDedicatedCollections" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsPriorPeriodAdjustment" name="FundsFromDedicatedCollectionsPriorPeriodAdjustment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FinancingSources" name="FinancingSources" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NetCost" name="NetCost" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_LiabilitiesAndNetPositionAbstract" name="LiabilitiesAndNetPositionAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_LiabilitiesAndNetPosition" name="LiabilitiesAndNetPosition" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_CafrChangeInNetPositionAbstract" name="CafrChangeInNetPositionAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsNetPositionAdjusted" name="FundsFromDedicatedCollectionsNetPositionAdjusted" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FundTypeAxis" name="FundTypeAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FundTypeDomain" name="FundTypeDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalOldAgeAndSurvivorsInsuranceTrustFundMember" name="FederalOldAgeAndSurvivorsInsuranceTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalHospitalInsuranceTrustFundMember" name="FederalHospitalInsuranceTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalDisabilityInsuranceTrustFundMember" name="FederalDisabilityInsuranceTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalSupplementaryMedicalInsuranceTrustFundMember" name="FederalSupplementaryMedicalInsuranceTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherFundsFromDedicatedCollectionsMember" name="AllOtherFundsFromDedicatedCollectionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FundsFromDedicatedCollectionsMember" name="FundsFromDedicatedCollectionsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_UnemploymentTrustFundMember" name="UnemploymentTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_HighwayTrustFundAndAirportAndAirwayTrustFundMember" name="HighwayTrustFundAndAirportAndAirwayTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_HighwayTrustFundMember" name="HighwayTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AirportAndAirwayTrustFundMember" name="AirportAndAirwayTrustFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NumberOfFundsFromDedicatedCollections" name="NumberOfFundsFromDedicatedCollections" type="xbrli:decimalItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_PercentageOfExciseTaxRevenues" name="PercentageOfExciseTaxRevenues" type="num:percentItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ExciseTaxRevenues" name="ExciseTaxRevenues" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FiduciaryActivities" name="FiduciaryActivities" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FiduciaryActivitiesLineItems" name="FiduciaryActivitiesLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryActivitiesTable" name="FiduciaryActivitiesTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryNetAssets" name="FiduciaryNetAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FiduciaryActivityAxis" name="FiduciaryActivityAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryActivityDomain" name="FiduciaryActivityDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ThriftSavingsFundMember" name="ThriftSavingsFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherFiduciaryActivitiesMember" name="AllOtherFiduciaryActivitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryInvestments" name="FiduciaryInvestments" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NonTreasurySecuritiesMember" name="NonTreasurySecuritiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ThriftSavingsPlanMember" name="ThriftSavingsPlanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ThriftSavingsFundAndDepartmentOfInteriorsMember" name="ThriftSavingsFundAndDepartmentOfInteriorsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FiduciaryFundBalance" name="FiduciaryFundBalance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_FiduciaryInvestmentsAndFiduciaryFundBalance" name="FiduciaryInvestmentsAndFiduciaryFundBalance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NumberOfParticipants" name="NumberOfParticipants" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfParticipantsContributingOwnMoney" name="NumberOfParticipantsContributingOwnMoney" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfFederalEntities" name="NumberOfFederalEntities" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfFiduciaryActivities" name="NumberOfFiduciaryActivities" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_NumberOfFiduciaryFunds" name="NumberOfFiduciaryFunds" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" />
+  <xsd:element id="usaf_ScheduleOfStewardshipLandAndHeritageAssetsLineItems" name="ScheduleOfStewardshipLandAndHeritageAssetsLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ScheduleOfStewardshipLandAndHeritageAssetsTable" name="ScheduleOfStewardshipLandAndHeritageAssetsTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_BonusMember" name="BonusMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherRevenueMember" name="OtherRevenueMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_FederalNonGrantAssistance" name="FederalNonGrantAssistance" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalAssistancePerFederalGovernment" name="FederalAssistancePerFederalGovernment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_DifferenceBetweenFederalAndStateAndLocalReportingOfTransfersAmount" name="DifferenceBetweenFederalAndStateAndLocalReportingOfTransfersAmount" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalAssistancePerStateLocalGovernment" name="FederalAssistancePerStateLocalGovernment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_IntergovernmentalTransfersLineItems" name="IntergovernmentalTransfersLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_IntergovernmentalTransfersTable" name="IntergovernmentalTransfersTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrTypeOfActivitiesAxis" name="CafrTypeOfActivitiesAxis" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_CafrTypeOfActivitiesDomain" name="CafrTypeOfActivitiesDomain" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MedicaidAndChildrenHealthInsurancePlanMember" name="MedicaidAndChildrenHealthInsurancePlanMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherNonCashProgramsForAidToDisadvantagedMember" name="OtherNonCashProgramsForAidToDisadvantagedMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_TransportationMember" name="TransportationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_ElementaryAndSecondaryEducationMember" name="ElementaryAndSecondaryEducationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherGrantsMember" name="OtherGrantsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NetChangeInDebtSecuritiesHeldAsInvestment" name="NetChangeInDebtSecuritiesHeldAsInvestment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_CivilServiceRetirementAndDisabilityFundMember" name="CivilServiceRetirementAndDisabilityFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_MilitaryRetirementFundMember" name="MilitaryRetirementFundMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_AllOtherProgramsAndFundsMember" name="AllOtherProgramsAndFundsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_SocialSecurityAdministrationMember" name="SocialSecurityAdministrationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OfficeOfPersonnelManagementMember" name="OfficeOfPersonnelManagementMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NetChangeInDebtInstrumentUnamortizedDiscountPremium" name="NetChangeInDebtInstrumentUnamortizedDiscountPremium" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_NetChangeInDebtSecuritiesHeldAsInvestmentAfterUnamortizedPremiumsDiscounts" name="NetChangeInDebtSecuritiesHeldAsInvestmentAfterUnamortizedPremiumsDiscounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_AvailableForSaleSecuritiesDebtSecuritiesAfterUnamortizedPremiumsDiscounts" name="AvailableForSaleSecuritiesDebtSecuritiesAfterUnamortizedPremiumsDiscounts" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_TreasurySecuritiesNonPension" name="TreasurySecuritiesNonPension" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_TreasurySecuritiesPension" name="TreasurySecuritiesPension" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_LoansFromFederalGovernment" name="LoansFromFederalGovernment" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_FederalAssets" name="FederalAssets" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="instant" nillable="true" abstract="false" xbrli:balance="debit" />
+  <xsd:element id="usaf_OffsettingNetIncomeLoss" name="OffsettingNetIncomeLoss" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" xbrli:balance="credit" />
+  <xsd:element id="usaf_OffsettingNetIncomeLossLineItems" name="OffsettingNetIncomeLossLineItems" type="xbrli:stringItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OffsettingNetIncomeLossTable" name="OffsettingNetIncomeLossTable" type="xbrli:stringItemType" substitutionGroup="xbrldt:hypercubeItem" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_EmployeeRetirementAndDisabilityMember" name="EmployeeRetirementAndDisabilityMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_HigherEducationMember" name="HigherEducationMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_TransitSystemsMember" name="TransitSystemsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_PublicHospitalsMember" name="PublicHospitalsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_SewerageAndWasteManagementMember" name="SewerageAndWasteManagementMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_WaterUtilitiesMember" name="WaterUtilitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_GasAndElectricUtilitiesMember" name="GasAndElectricUtilitiesMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_OtherKeyOffsettingAmountsMember" name="OtherKeyOffsettingAmountsMember" type="nonnum:domainItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="true" />
+  <xsd:element id="usaf_NumberOfUnemploymentInsuranceClaims" name="NumberOfUnemploymentInsuranceClaims" type="xbrli:integerItemType" substitutionGroup="xbrli:item" xbrli:periodType="duration" nillable="true" abstract="false" />
+</xsd:schema>
